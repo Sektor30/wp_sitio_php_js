@@ -17,5 +17,7 @@
 
 <script src="./assets/js/plugin.js"></script>
 
+<?php wp_footer(); ?>
+ 
 </body>
 </html>
