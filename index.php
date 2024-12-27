@@ -2,11 +2,7 @@
     get_header()
 ?>
 
-<?php if(have_posts()){ ?>
-        <?php while(have_posts()){ the_post(); ?>
-            <?php the_content()?>
-    <?php } ?>
- <?php } ?>
+
 
 
 <div class="container" style="padding-top: 200px;">
@@ -23,6 +19,17 @@
 
         <p class="text-center">Soy un desarrollador apasionado por crear soluciones web eficientes y atractivas. Con experiencia en diversas tecnologías y un enfoque en la usabilidad, me esfuerzo por entregar la mejor experiencia a los usuarios.</p>
     </section>
+
+
+<!-- wp_misproyectos -->
+
+    <?php if(have_posts()){ ?>
+        <?php while(have_posts()){ the_post(); ?>
+            <?php the_content()?>
+    <?php } ?>
+ <?php } ?>
+
+
 
     <!-- Proyectos -->
     <section id="projects" class="container mt-5">

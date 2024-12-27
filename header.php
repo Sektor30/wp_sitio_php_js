@@ -14,13 +14,12 @@
 
     <!-- Navbar -->
    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
+      class="navbar pt-4 navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid  ">
 
-      <a class="navbar-brand" href="<?php echo home_url();?>">
-          <img src="https://github.com/Sektor30/chooj-design/blob/main/assets/chooj-ico.png?raw=true"
-            width="50px"  alt="logo-chooj"/>
-        </a>
+        <div>
+            <?php the_custom_logo(); ?>
+            </div>
         
        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,6 +50,7 @@
                 </li>
             </ul>
         </div>
+     </div>
     </nav>
 
       <!-- Hero Section -->
