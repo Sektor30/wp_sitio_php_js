@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes(); ?>   >
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo("charset") ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de [Tu Nombre]</title>      
+    <!-- <title>Portafolio de [Tu Nombre]</title> -->      
     <!-- animate css cdnjs -->
     
-
     <?php wp_head(); ?>
-
-
 
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0" >
+    <?php wp_body_open(); ?>
 
     <!-- Navbar -->
    <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
 
-      <a class="navbar-brand" href="#"
-          ><img
-            src="https://github.com/Sektor30/chooj-design/blob/main/assets/chooj-ico.png?raw=true"
-            width="50px"
-            alt="logo-chooj"
-        /></a>
+      <a class="navbar-brand" href="<?php echo home_url();?>">
+          <img src="https://github.com/Sektor30/chooj-design/blob/main/assets/chooj-ico.png?raw=true"
+            width="50px"  alt="logo-chooj"/>
+        </a>
         
        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

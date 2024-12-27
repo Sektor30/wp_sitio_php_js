@@ -2,6 +2,12 @@
     get_header()
 ?>
 
+<?php if(have_posts()){ ?>
+        <?php while(have_posts()){ the_post(); ?>
+            <?php the_content()?>
+    <?php } ?>
+ <?php } ?>
+
 
 <div class="container" style="padding-top: 200px;">
             <h1 class="display-4" >Hola, Soy Sergio</h1>
