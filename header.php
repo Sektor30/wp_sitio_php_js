@@ -21,18 +21,28 @@
             <?php the_custom_logo(); ?>
             </div>
         
+        <div class="menu-toggle" id="menu-toggle" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu" id="menu">
+            <a href="#about">Sobre Mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#testimonials">Testimonios</a>
+            <a href="#contact">Contacto</a>
+        </div>
        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <img
               src="https://cdn-icons-png.flaticon.com/128/15791/15791375.png"
               style="width: 40px"
               alt="menu"
           /></span>
-        </button>
+        </button> -->
         
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+        <!-- <ul class="navbar-nav ms-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#about">Sobre Mí</a>
                 </li>
@@ -48,7 +58,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contacto</a>
                 </li>
-            </ul>
+            </ul> -->
+
+        
+          
+
         </div>
      </div>
     </nav>

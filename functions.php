@@ -64,3 +64,18 @@ function plz_theme_supports() {
 }
 
 add_action("after_setup_theme","plz_theme_supports");
+
+
+function plz_add_menus(){
+    register_nav_menus(
+        array(  
+        'menu-principal' => "Menu principal",
+        'menu-responsive' => "Menu responsive"
+        )
+    );
+
+}
+
+add_action("after_setup_theme","plz_add_menus");
+
+
