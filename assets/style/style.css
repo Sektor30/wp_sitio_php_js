@@ -1,4 +1,4 @@
- html {
+        html {
             scroll-behavior: smooth; /* Activa el desplazamiento suave para ir del menu a las secciones*/
         }
 
@@ -6,6 +6,126 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f4f7fa;
         }
+
+        .logo-container{
+            margin-top:20px;
+        }
+        
+         .encabezado{
+            
+         }   
+
+         .enbezado__logo{
+            
+         }
+
+         .encabezado__menu{
+           
+         }
+
+         .encabezado__hamburguesa{  
+            
+         }
+
+         @media screen and (min-width: 0) {
+            .encabezado .encabezado__hamburguesa {
+              visibility: visible;
+            }
+          }
+          @media screen and (min-width: 768px) {
+            .encabezado .encabezado__hamburguesa {
+                visibility: hidden;
+            }
+          }
+
+
+          .encabezado .encabezado__menu-responsive{
+            
+            display: flex;
+         }
+
+          
+
+         @media screen and (min-width: 0) {
+            .encabezado .encabezado__menu-responsive {
+                visibility:visible ;
+              height:100px;
+          
+            }
+        
+        }
+
+
+          @media screen and (min-width: 768px) {
+            .encabezado .encabezado__menu-responsive {
+                visibility: hidden;
+      
+            }
+          }
+
+
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 0.5rem 1rem;
+            /* position: fixed; */
+            width: 100%;
+            z-index: 1000;
+            
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+            
+        }
+
+        .navbar a:hover {
+            color: #00bcd4;
+        }
+
+        /* Menú principal */
+        .menu {
+            display: flex;
+            margin-top: 10px;
+            padding: 10px 0;
+            gap: 10px;
+            
+        }
+
+        .menu ul{
+            display: flex;
+            
+        }
+
+        /* Menú hamburguesa oculto por defecto */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+        }
+
+        .menu-toggle span {
+            background-color: white;
+            height: 3px;
+            width: 25px;
+            margin: 3px 0;
+            transition: transform 0.3s;
+        }
+
+        .menu-toggle {
+            visibility: hidden;
+        }
+
 
         .hero {
             background-image: url(https://cdn.pixabay.com/photo/2020/06/15/15/34/science-5302286_1280.jpg);
@@ -63,37 +183,6 @@
             color: white;
             padding: 20px 0;
         }
-
-        .menu{
-            
-        }
-
-        .menu ul{
-            border: 2px solid green;
-            text-decoration: none;
-        }
-
-        .menu li{
-            border: 2px solid red;
-            display: inline;
-            
-        }
-
-
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-link {
-            font-weight: 500;
-          
-        }
-
-        .nav-link:hover {
-            color: #007bff;
-        }
-
-       
 
         .progress {
             height: 20px;
@@ -159,4 +248,20 @@
 
         .nav-tabs .nav-link:hover {
             background-color: rgba(0, 123, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            /* Ocultar menú principal en pantallas pequeñas */
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background-color: #333;
+                width: 200px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            }
+
+
         }

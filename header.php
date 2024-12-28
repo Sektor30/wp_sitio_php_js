@@ -12,60 +12,45 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0" >
     <?php wp_body_open(); ?>
 
-    <!-- Navbar -->
-   <nav
-      class="navbar pt-4 navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container-fluid  ">
+    <header class="pt-4 encabezado bg-dark fixed-top  ">
+        <div class="container-fluid gx-5 py-3">
+            
+            <div class="row align-items-center">
+                <div class="enbezado__logo col col-md-2 px-2 px-md-4">
+                <?php the_custom_logo(); ?>
+                </div>
 
-        <div>
-            <?php the_custom_logo(); ?>
+
+                <div class="encabezado__hamburguesa col text-center">
+                <a href="#">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/img/icon-menu.svg" alt="menu icon">
+                    </a>
+                </div>
+
+                <div class="encabezado__menu col col-md-5">
+                <?php wp_nav_menu(
+                        array(
+                            "menu" => 'menu-principal'
+                        )
+                    ); ?>
+                </div>
+
             </div>
-        
-        <div class="menu-toggle" id="menu-toggle" >
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="menu" id="menu">
-            <a href="#about">Sobre Mí</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#testimonials">Testimonios</a>
-            <a href="#contact">Contacto</a>
-        </div>
-       
-       <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/15791/15791375.png"
-              style="width: 40px"
-              alt="menu"
-          /></span>
-        </button> -->
-        
-        <!-- <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#about">Sobre Mí</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Habilidades</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testimonials">Testimonios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contacto</a>
-                </li>
-            </ul> -->
 
+             
+        <div class="row ">
+            <div class="encabezado__menu-responsive  text-center col-6 m-auto  ">
+            <?php wp_nav_menu(
+                        array(
+                            "menu" => 'menu-responsive'
+                        )
+                    ); ?>
+        </div>
         
-          
+    </div>    
 
         </div>
-     </div>
-    </nav>
+    </header>
 
       <!-- Hero Section -->
       <div class="hero">
