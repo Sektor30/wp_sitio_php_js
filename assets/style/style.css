@@ -199,7 +199,7 @@
 
 
         .contenedor {
-          background-color: rgb(202, 202, 202);
+          background-color: #cacaca;
         }
 
         .hero {
@@ -268,32 +268,6 @@
         .progress-bar {
           border-radius: 10px;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -366,5 +340,36 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
           }
 
+
+        }
+
+
+        /* single-page */
+
+        .imagen-wp {
+         width: 100%;
+        }
+
+
+        @media (min-width: 0px) {
+
+          /* Ocultar menú principal en pantallas pequeñas */
+
+          .imagen-wp {
+
+            width: 150%;
+          }
+
+        }
+
+
+        @media (min-width: 769px) {
+
+          /* Ocultar menú principal en pantallas pequeñas */
+
+          .imagen-wp {
+           
+            width: 100%;
+          }
 
         }

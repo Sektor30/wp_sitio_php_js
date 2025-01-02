@@ -2,7 +2,7 @@
 
 <!-- Footer -->
  <!-- ajustes de pie de pagina con nuevos sections -->
-<footer class="footer mt-5">
+<footer class="footer">
     <div class="row">
     <div class="container text-center ">
 

@@ -2,6 +2,10 @@
     get_header()
 ?>
 
+
+ <!-- Hero Section -->
+ <div class="hero">
+
 <div class="container" style="padding-top: 200px;">
     <h1 class="display-4">Hola, Soy Sergio</h1>
     <p class="lead">Desarrollador Web | Diseñador Gráfico | Creativo</p>
@@ -9,33 +13,35 @@
 </div>
 </div>
 
-<div class="contenedor border   "> 
+<div class="contenedor border   ">
 
 
-<!-- wp_misproyectos -->
+    <!-- wp_misproyectos -->
 
-<?php if(have_posts()){ ?>
-<?php while(have_posts()){ the_post(); ?>
-<?php the_content()?>
-<?php } ?>
-<?php } ?>
+    <?php if(have_posts()){ ?>
+    <?php while(have_posts()){ the_post(); ?>
+    <?php the_content()?>
+    <?php } ?>
+    <?php } ?>
 
-<!-- Sobre Mí -->
-<section id="about" class="container justify-content-center ">
-    <div class="row">
-    <h2 class="text-center animate__animated animate__backInDown animate__tada">Sobre Mí</h2>
+    <!-- Sobre Mí -->
+    <section id="about" class="container justify-content-center ">
+        <div class="row">
+            <h2 class="text-center animate__animated animate__backInDown animate__tada">Sobre Mí</h2>
 
-    <p class="col-sm-8 align-item-center text-center  fs-4 m-auto ">Soy un desarrollador apasionado por crear soluciones web eficientes y atractivas. Con
-        experiencia en diversas tecnologías y un enfoque en la usabilidad, me esfuerzo por entregar la mejor experiencia
-        a los usuarios.</p>
-    </div>
-</section>
+            <p class="col-sm-8 align-item-center text-center  fs-4 m-auto ">Soy un desarrollador apasionado por crear
+                soluciones web eficientes y atractivas. Con
+                experiencia en diversas tecnologías y un enfoque en la usabilidad, me esfuerzo por entregar la mejor
+                experiencia
+                a los usuarios.</p>
+        </div>
+    </section>
 
 
 
 
 
-<?php
+    <?php
     $args = array(
         "post_type" => array("producto"),
         "posts_per_page"=> -1
@@ -46,17 +52,18 @@
 
 
 
-<!-- Proyectos -->
+    <!-- Proyectos -->
 
-<section id="projects" class="container mt-5">
+    <section id="projects" class="container mt-5">
 
-    <h2 class="text-center animate__animated animate__bounceIn">Proyectos</h2>
-        <div class="row  justify-content-center" >
-    
-        <?php if($productos->have_posts()){ ?>
-        <?php while($productos->have_posts()) { $productos->the_post();?>
+        <h2 class="text-center animate__animated animate__bounceIn">Proyectos</h2>
+        <div class="row  justify-content-center">
 
-            <div class="col-3 m-3 ">
+            <?php if($productos->have_posts()){ ?>
+            <?php while($productos->have_posts()) { $productos->the_post();?>
+
+            <div class="col-12 col-lg-3 col-sm-10 m-3 ">
+                
                 <div class="card p-3 ">
                     <img src="<?php the_post_thumbnail_url('post-thumbnail'); ?>" class="card-img-top"
                         alt="<?php the_title(); ?>">
@@ -65,19 +72,18 @@
 
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
-                            <p class="card-text">Descripción breve del proyecto 1. Una solución creativa que resuelve un
-                                problema.</p>
+                            <p class="card-text"> <?php the_content()?></p>
 
                             <a href="<?php the_permalink();?>" class="btn btn-primary ">Ver Más</a>
                         </div>
                     </div>
                 </div>
             </div>
-                <?php } ?>
-                <?php  } ?>
-            
-    </div>
-</section>
+            <?php } ?>
+            <?php  } ?>
+
+        </div>
+    </section>
 
 </div>
 
@@ -114,7 +120,7 @@
     </div>
     <div> <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg" alt=""> </div>
     <div> <img src="https://cdn.pixabay.com/photo/2019/10/09/07/28/development-4536630_960_720.png" alt=""> </div>
-    <div> <img src="https://github.com/Sektor30/chooj-design/blob/main/assets/chooj-ico.png?raw=true" alt=""> </div>
+    
     <div> <img src="https://cdn.pixabay.com/photo/2016/02/18/19/25/pc-1207886_1280.jpg" alt=""> </div>
     <div> <img src="https://cdn.pixabay.com/photo/2020/09/27/13/15/data-5606639_960_720.jpg" alt=""> </div>
     <div> <img src="https://cdn.pixabay.com/photo/2024/09/08/08/52/man-9031574_1280.png" alt=""> </div>
@@ -243,4 +249,4 @@
 ?>
 
 
-<!-- new repo save --sektor30 -->
+    <!-- new repo save --sektor30 -->

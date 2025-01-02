@@ -53,5 +53,4 @@
         </div>
     </header>
 
-      <!-- Hero Section -->
-      <div class="hero">
+     
